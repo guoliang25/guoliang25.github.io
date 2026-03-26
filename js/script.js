@@ -2,8 +2,7 @@
 function detectLanguage() {
   var stored = localStorage.getItem('lang');
   if (stored) return stored;
-  var browserLang = navigator.language || navigator.userLanguage;
-  return browserLang.startsWith('zh') ? 'zh' : 'en';
+  return 'en';
 }
 
 function setLanguage(lang) {
