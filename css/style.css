@@ -41,15 +41,16 @@ hr {
 }
 
 /* ========== Language ========== */
-[data-lang-en] {
+/* Default: English visible, Chinese hidden */
+[data-lang-zh] {
   display: none;
 }
 
-body.lang-en [data-lang-zh] {
+body.lang-zh [data-lang-en] {
   display: none;
 }
 
-body.lang-en [data-lang-en] {
+body.lang-zh [data-lang-zh] {
   display: inline;
 }
 

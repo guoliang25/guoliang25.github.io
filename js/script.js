@@ -6,16 +6,16 @@ function detectLanguage() {
 }
 
 function setLanguage(lang) {
-  document.body.classList.toggle('lang-en', lang === 'en');
-  document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
+  document.body.classList.toggle('lang-zh', lang === 'zh');
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
   localStorage.setItem('lang', lang);
 }
 
 setLanguage(detectLanguage());
 
 document.getElementById('langToggle').addEventListener('click', function () {
-  var isEn = document.body.classList.contains('lang-en');
-  setLanguage(isEn ? 'zh' : 'en');
+  var isZh = document.body.classList.contains('lang-zh');
+  setLanguage(isZh ? 'en' : 'zh');
 });
 
 // Tab switching
