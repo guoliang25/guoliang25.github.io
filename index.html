@@ -4,24 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Liang Guo (郭亮) — Senior Researcher at Tencent</title>
-  <meta name="description" content="Liang Guo (郭亮) — Senior Researcher at Tencent. Specializing in Recommendation Systems, Computational Advertising, Deep Learning, NLP, and LLM. 21 patents filed.">
+  <meta name="description" content="Liang Guo (郭亮) — Senior Researcher at Tencent. 8+ years in Recommendation Systems and Computational Advertising. Deep Learning, NLP, LLM. 21 patents filed.">
   <meta name="keywords" content="Liang Guo, 郭亮, Tencent, Recommendation System, Computational Advertising, Deep Learning, NLP, LLM, RecSys">
   <meta name="author" content="Liang Guo">
   <link rel="canonical" href="https://guoliang25.github.io/">
 
-  <!-- Open Graph (for social sharing) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Liang Guo (郭亮) — Senior Researcher at Tencent">
-  <meta property="og:description" content="Specializing in Recommendation Systems, Computational Advertising, Deep Learning, NLP, and LLM.">
+  <meta property="og:description" content="Senior Researcher at Tencent. 8+ years in Recommendation Systems and Computational Advertising.">
   <meta property="og:url" content="https://guoliang25.github.io/">
   <meta property="og:type" content="website">
 
-  <!-- Google site verification — 替换为你在 Google Search Console 获取的验证码 -->
-  <!-- <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE"> -->
-
-  <!-- Baidu site verification — 替换为你在百度站长平台获取的验证码 -->
-  <!-- <meta name="baidu-site-verification" content="YOUR_BAIDU_VERIFICATION_CODE"> -->
-
-  <!-- Structured Data (JSON-LD) for better SEO -->
+  <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -30,21 +24,12 @@
     "alternateName": "郭亮",
     "url": "https://guoliang25.github.io/",
     "jobTitle": "Senior Researcher",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Tencent"
-    },
+    "worksFor": { "@type": "Organization", "name": "Tencent" },
     "alumniOf": [
-      {
-        "@type": "CollegeOrUniversity",
-        "name": "National University of Defense Technology"
-      },
-      {
-        "@type": "CollegeOrUniversity",
-        "name": "Beijing University of Posts and Telecommunications"
-      }
+      { "@type": "CollegeOrUniversity", "name": "National University of Defense Technology" },
+      { "@type": "CollegeOrUniversity", "name": "Beijing University of Posts and Telecommunications" }
     ],
-    "knowsAbout": ["Recommendation Systems", "Computational Advertising", "Deep Learning", "NLP", "LLM", "Machine Learning"],
+    "knowsAbout": ["Recommendation Systems", "Computational Advertising", "Deep Learning", "NLP", "LLM"],
     "sameAs": [
       "https://scholar.google.com.hk/citations?user=Jbek4AQAAAAJ",
       "https://github.com/mattguo-loop"
@@ -52,7 +37,7 @@
   }
   </script>
 
-  <!-- Google Analytics (GA4) — Replace G-D1D2M2NY6D with your Measurement ID -->
+  <!-- Google Analytics (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1D2M2NY6D"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -65,24 +50,107 @@
 </head>
 <body>
 
+  <!-- Top Navigation -->
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="#" class="nav-name">Liang Guo</a>
+      <div class="nav-links">
+        <a href="#" class="nav-tab active" data-page="about">
+          <span data-lang-zh>关于</span>
+          <span data-lang-en>About</span>
+        </a>
+        <a href="#" class="nav-tab" data-page="experience">
+          <span data-lang-zh>经历</span>
+          <span data-lang-en>Experience</span>
+        </a>
+        <a href="#" class="nav-tab" data-page="projects">
+          <span data-lang-zh>项目</span>
+          <span data-lang-en>Projects</span>
+        </a>
+        <a href="#" class="nav-tab" data-page="publications">
+          <span data-lang-zh>论文专利</span>
+          <span data-lang-en>Publications</span>
+        </a>
+        <a href="#" class="nav-tab" data-page="awards">
+          <span data-lang-zh>荣誉</span>
+          <span data-lang-en>Awards</span>
+        </a>
+      </div>
+      <button id="langToggle" class="lang-btn" aria-label="Switch Language">中/EN</button>
+    </div>
+  </nav>
+
   <div class="container">
 
-    <!-- Language Toggle -->
-    <div class="lang-switch">
-      <button id="langToggle" aria-label="Switch Language">[中文 / EN]</button>
-    </div>
+    <!-- ==================== ABOUT PAGE ==================== -->
+    <div class="page active" id="page-about">
+      <header class="bio">
+        <div class="bio-photo">
+          <img src="images/avatar.jpg" alt="Liang Guo" class="avatar-img">
+        </div>
+        <div class="bio-text">
+          <h1>
+            <span data-lang-zh>郭亮</span>
+            <span data-lang-en>Liang Guo</span>
+            <span class="bio-chinese-name" data-lang-en>(郭亮)</span>
+          </h1>
+          <p class="bio-affiliation">
+            <span data-lang-zh>腾讯 · 高级研究员</span>
+            <span data-lang-en>Senior Researcher · <strong>Tencent</strong></span>
+          </p>
+          <p class="bio-location">📍 Shenzhen, China</p>
 
-    <!-- Header / Bio -->
-    <header class="bio">
-      <div class="bio-photo">
-        <img src="images/avatar.jpg" alt="Liang Guo" class="avatar-img">
-      </div>
-      <div class="bio-text">
-        <h1>
-          <span data-lang-zh>郭亮</span>
-          <span data-lang-en>Liang Guo</span>
-        </h1>
-        <p class="bio-desc">
+          <p class="bio-links">
+            <a href="mailto:guoliang0803@gmail.com">📧 Email</a>
+            <a href="https://scholar.google.com.hk/citations?user=Jbek4AQAAAAJ" target="_blank" rel="noopener">🎓 Google Scholar</a>
+            <a href="https://github.com/guoliang25" target="_blank" rel="noopener">💻 GitHub</a>
+          </p>
+
+          <div class="bio-interests">
+            <div class="interest-group">
+              <span class="interest-label">
+                <span data-lang-zh>专业方向</span>
+                <span data-lang-en>Research</span>
+              </span>
+              <span class="interest-tag tag-pro">
+                <span data-lang-zh>推荐系统</span>
+                <span data-lang-en>RecSys</span>
+              </span>
+              <span class="interest-tag tag-pro">
+                <span data-lang-zh>计算广告</span>
+                <span data-lang-en>Comp. Ads</span>
+              </span>
+              <span class="interest-tag tag-pro">
+                <span data-lang-zh>深度学习</span>
+                <span data-lang-en>Deep Learning</span>
+              </span>
+              <span class="interest-tag tag-pro">NLP</span>
+              <span class="interest-tag tag-pro">LLM</span>
+            </div>
+            <div class="interest-group">
+              <span class="interest-label">
+                <span data-lang-zh>个人兴趣</span>
+                <span data-lang-en>Hobbies</span>
+              </span>
+              <span class="interest-tag tag-hobby">
+                <span data-lang-zh>量化交易 / 股票</span>
+                <span data-lang-en>Quant / Stocks</span>
+              </span>
+              <span class="interest-tag tag-hobby">
+                <span data-lang-zh>机器人</span>
+                <span data-lang-en>Robotics</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="about-section">
+        <h2>
+          <span data-lang-zh>个人简介</span>
+          <span data-lang-en>About Me</span>
+        </h2>
+        <p>
           <span data-lang-zh>
             腾讯高级研究员，专注于推荐系统与计算广告领域。在内容推荐（信息流、视频、动漫）和广告推荐（电商、游戏行业）上均有丰富的实战经验，覆盖召回、粗排、精排、特征建模全链路。研究兴趣：机器学习、深度学习、推荐算法、NLP、大语言模型（LLM）。2022年入选深圳创新中心专家人才库。
           </span>
@@ -90,7 +158,7 @@
             I am a Senior Researcher at <strong>Tencent</strong>, working on recommendation systems and computational advertising. I have extensive hands-on experience in both <strong>content recommendation</strong> (feeds, video, comics) and <strong>ad recommendation</strong> (e-commerce, gaming), covering the full pipeline of retrieval, pre-ranking, ranking, and feature engineering. Research interests: Machine Learning, Deep Learning, Recommendation Algorithms, NLP, LLM. I was selected for the Shenzhen Innovation Center Expert Talent Pool in 2022.
           </span>
         </p>
-        <p class="bio-desc">
+        <p>
           <span data-lang-zh>
             硕士毕业于<strong>国防科学技术大学</strong>（推荐算法方向），本科毕业于<strong>北京邮电大学</strong>。曾在<strong>华为</strong>担任高级算法工程师，负责大数据营销平台的开发。
           </span>
@@ -98,58 +166,135 @@
             I received my M.S. from <strong>National University of Defense Technology (NUDT)</strong> in Recommendation Algorithms, and B.S. from <strong>Beijing University of Posts and Telecommunications (BUPT)</strong>. Before Tencent, I worked at <strong>Huawei</strong> as a Senior Algorithm Engineer on big data marketing platforms.
           </span>
         </p>
-        <div class="bio-interests">
-          <div class="interest-group">
-            <span class="interest-label">
-              <span data-lang-zh>专业方向</span>
-              <span data-lang-en>Research</span>
-            </span>
-            <span class="interest-tag tag-pro">
-              <span data-lang-zh>推荐系统</span>
-              <span data-lang-en>RecSys</span>
-            </span>
-            <span class="interest-tag tag-pro">
-              <span data-lang-zh>计算广告</span>
-              <span data-lang-en>Comp. Ads</span>
-            </span>
-            <span class="interest-tag tag-pro">
-              <span data-lang-zh>深度学习</span>
-              <span data-lang-en>Deep Learning</span>
-            </span>
-            <span class="interest-tag tag-pro">NLP</span>
-            <span class="interest-tag tag-pro">LLM</span>
+      </section>
+
+      <section class="about-section">
+        <h2>
+          <span data-lang-zh>教育背景</span>
+          <span data-lang-en>Education</span>
+        </h2>
+        <div class="edu-item">
+          <div class="edu-header">
+            <strong>
+              <span data-lang-zh>国防科学技术大学 — 硕士</span>
+              <span data-lang-en>National University of Defense Technology (NUDT) — M.S.</span>
+            </strong>
+            <span class="date-tag">2013 – 2016</span>
           </div>
-          <div class="interest-group">
-            <span class="interest-label">
-              <span data-lang-zh>个人兴趣</span>
-              <span data-lang-en>Hobbies</span>
-            </span>
-            <span class="interest-tag tag-hobby">
-              <span data-lang-zh>量化交易 / 股票</span>
-              <span data-lang-en>Quant / Stocks</span>
-            </span>
-            <span class="interest-tag tag-hobby">
-              <span data-lang-zh>机器人</span>
-              <span data-lang-en>Robotics</span>
-            </span>
-          </div>
+          <p class="edu-detail">
+            <span data-lang-zh>信息系统与管理学院，研究方向：推荐算法 / 大数据 / 机器学习</span>
+            <span data-lang-en>School of Information Systems and Management. Research: Recommendation Algorithms / Big Data / ML</span>
+          </p>
         </div>
+        <div class="edu-item">
+          <div class="edu-header">
+            <strong>
+              <span data-lang-zh>北京邮电大学 — 本科</span>
+              <span data-lang-en>Beijing University of Posts and Telecommunications (BUPT) — B.S.</span>
+            </strong>
+            <span class="date-tag">2009 – 2013</span>
+          </div>
+          <p class="edu-detail">
+            <span data-lang-zh>管理学院，电子商务专业</span>
+            <span data-lang-en>School of Management, E-Commerce</span>
+          </p>
+        </div>
+      </section>
 
-        <p class="bio-links">
-          <a href="mailto:guoliang0803@gmail.com">Email</a> /
-          <a href="https://scholar.google.com.hk/citations?user=Jbek4AQAAAAJ" target="_blank" rel="noopener">Google Scholar</a> /
-          <a href="https://github.com/mattguo-loop" target="_blank" rel="noopener">GitHub</a>
-        </p>
+      <section class="about-section">
+        <h2>News</h2>
+        <ul class="news-list">
+          <li><span class="news-date">Mar 2026</span>
+            <span data-lang-zh>新专利"用户行为序列分析和广告质量评估的多Agent构建"已提交</span>
+            <span data-lang-en>New patent filed: "Multi-Agent Construction for User Behavior Sequence Analysis and Ad Quality Evaluation"</span>
+          </li>
+          <li><span class="news-date">Jan 2026</span>
+            <span data-lang-zh>新专利"生成式推荐中的模型框架设计"已提交</span>
+            <span data-lang-en>New patent filed: "Model Framework Design for Generative Recommendation"</span>
+          </li>
+          <li><span class="news-date">2025</span>
+            <span data-lang-zh>两项新专利已提交（LLM重排、多模态+ID兴趣建模）</span>
+            <span data-lang-en>Two new patents filed (LLM re-ranking, multimodal + ID interest modeling)</span>
+          </li>
+          <li><span class="news-date">2023</span>
+            <span data-lang-zh>获评腾讯"行家"平台年度优秀行家（评分98.55/100）</span>
+            <span data-lang-en>Named Tencent Annual Outstanding Expert (rated 98.55/100, 46 consultations)</span>
+          </li>
+          <li><span class="news-date">2022</span>
+            <span data-lang-zh>入选深圳创新中心专家人才库</span>
+            <span data-lang-en>Selected for Shenzhen Innovation Center Expert Talent Pool</span>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- ==================== EXPERIENCE PAGE ==================== -->
+    <div class="page" id="page-experience">
+      <h2>
+        <span data-lang-zh>工作经历</span>
+        <span data-lang-en>Experience</span>
+      </h2>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <strong>
+            <span data-lang-zh>腾讯 — 高级研究员</span>
+            <span data-lang-en>Tencent — Senior Researcher</span>
+          </strong>
+          <span class="date-tag">2018.05 – Present</span>
+        </div>
+        <ul>
+          <li>
+            <span data-lang-zh><strong>广告电商行业模型（2020–2022，负责人）：</strong>从0搭建行业模型，使用MoE/MMoE/CGC多任务融合建模，引入STAR/DIN-attention/FwFFM等模型优化。上线效果：电商行业消耗+3.48%，GMV+5.93%，带动大盘GMV+1.48%。</span>
+            <span data-lang-en><strong>E-commerce Ad Industry Model (2020–2022, Lead):</strong> Built industry-specific models from scratch using MoE/MMoE/CGC multi-task learning, with STAR/DIN-attention/FwFFM optimizations. Results: +3.48% ad spend, +5.93% GMV, +1.48% overall platform GMV.</span>
+          </li>
+          <li>
+            <span data-lang-zh><strong>电商特征图谱构建（2019–2020，负责人）：</strong>构建DSSM及自监督Embedding特征，泛娱乐特征及电商embedding特征应用于召回/粗排/精排全链路。上线效果：电商行业消耗+0.88%，GMV+1.38%。</span>
+            <span data-lang-en><strong>E-commerce Feature Graph (2019–2020, Lead):</strong> Built DSSM and self-supervised embedding features applied across retrieval/pre-ranking/ranking pipeline. Results: +0.88% ad spend, +1.38% GMV.</span>
+          </li>
+          <li>
+            <span data-lang-zh><strong>信息流推荐（2018–2020，负责人）：</strong>负责波洞App（从0到1）、手Q动漫、企鹅电竞视频Feeds的推荐算法，从LR到NN模型演进，经历冷启动、策略迭代等各阶段。对比产品部算法中台：波洞视频观看时长+68%，点击率+41%。</span>
+            <span data-lang-en><strong>Feed Recommendation (2018–2020, Lead):</strong> Led recommendation systems for Boodo App (from scratch), QQ Comics, Penguin Esports video feeds. Evolved from LR to deep NN models. vs. product algorithm team: +68% watch time, +41% CTR.</span>
+          </li>
+          <li>
+            <span data-lang-zh><strong>内部行家咨询：</strong>在腾讯"行家"平台提供「从信息流推荐到广告推荐的模型策略经验」专题咨询，累计46次咨询，评分98.55/100，2023年度优秀行家。</span>
+            <span data-lang-en><strong>Internal Expert Consulting:</strong> Provided consulting on Tencent's Expert platform covering cold-start, multi-objective modeling, embedding engineering, and A/B testing. 46 consultations, rated 98.55/100, named 2023 Annual Outstanding Expert.</span>
+            <div class="testimonials">
+              <blockquote>
+                <span data-lang-zh>"对推荐，包括广告、信息流、电商等行业都有大量的经验，思维敏捷，快速给出基于过往经验的想法和解法，获益良多。"</span>
+                <span data-lang-en>"Extensive experience across recommendation, ads, feeds, and e-commerce. Quick-thinking, rapidly provides ideas and solutions. Greatly beneficial."</span>
+              </blockquote>
+              <blockquote>
+                <span data-lang-zh>"在广告模型特征算法等方面经验非常丰富，对AI的理解也非常深刻，收获很大。"</span>
+                <span data-lang-en>"Very rich experience in ad model features and algorithms, with deep understanding of AI. Extremely rewarding."</span>
+              </blockquote>
+            </div>
+          </li>
+        </ul>
       </div>
-    </header>
 
-    <hr>
+      <div class="exp-item">
+        <div class="exp-header">
+          <strong>
+            <span data-lang-zh>华为 — 高级算法工程师</span>
+            <span data-lang-en>Huawei — Senior Algorithm Engineer</span>
+          </strong>
+          <span class="date-tag">2016.03 – 2018.04</span>
+        </div>
+        <ul>
+          <li>
+            <span data-lang-zh><strong>UDM大数据营销平台：</strong>负责Lookalike用户挖掘模块和实时营销时机事件引擎开发，基于Hadoop/Spark/Kafka构建实时敏捷数字化营销解决方案。</span>
+            <span data-lang-en><strong>UDM Big Data Marketing Platform:</strong> Developed Lookalike user mining module and real-time marketing event engine using Hadoop/Spark/Kafka for agile digital marketing solutions.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-    <!-- Side Projects with Tabs -->
-    <section id="projects">
+    <!-- ==================== PROJECTS PAGE ==================== -->
+    <div class="page" id="page-projects">
       <h2>
         <span data-lang-zh>个人项目</span>
-        <span data-lang-en>Side Projects</span>
+        <span data-lang-en>Projects</span>
       </h2>
 
       <div class="tabs">
@@ -158,12 +303,12 @@
           <span data-lang-en>🎯 RecSys</span>
         </button>
         <button class="tab-btn" data-tab="multimodal">
-          <span data-lang-zh>🧠 多模态内容理解</span>
+          <span data-lang-zh>🧠 多模态</span>
           <span data-lang-en>🧠 Multimodal</span>
         </button>
         <button class="tab-btn" data-tab="quant">
-          <span data-lang-zh>📈 量化 / 股票</span>
-          <span data-lang-en>📈 Quant / Stocks</span>
+          <span data-lang-zh>📈 量化</span>
+          <span data-lang-en>📈 Quant</span>
         </button>
         <button class="tab-btn" data-tab="robotics">
           <span data-lang-zh>🤖 机器人</span>
@@ -186,7 +331,7 @@
           </div>
           <p class="project-desc">
             <span data-lang-zh>探索将大语言模型融入推荐系统全链路：利用LLM进行用户兴趣理解、候选集重排序和推荐理由生成，结合传统召回/精排模型构建混合推荐架构。</span>
-            <span data-lang-en>Exploring LLM integration across the full recommendation pipeline: leveraging LLMs for user interest understanding, candidate re-ranking, and recommendation explanation generation, combined with traditional retrieval/ranking models in a hybrid architecture.</span>
+            <span data-lang-en>Exploring LLM integration across the full recommendation pipeline: leveraging LLMs for user interest understanding, candidate re-ranking, and recommendation explanation generation.</span>
           </p>
           <div class="project-tags">
             <span class="project-tag">LLM</span>
@@ -210,8 +355,8 @@
             </span>
           </div>
           <p class="project-desc">
-            <span data-lang-zh>基于Capsule Network和Transformer的用户多兴趣抽取方法，结合行为序列时序建模，捕获用户动态兴趣演化，提升召回与精排的个性化能力。</span>
-            <span data-lang-en>Multi-interest extraction via Capsule Networks and Transformers, combined with temporal sequential modeling to capture dynamic user interest evolution, improving personalization in retrieval and ranking.</span>
+            <span data-lang-zh>基于Capsule Network和Transformer的用户多兴趣抽取方法，结合行为序列时序建模，捕获用户动态兴趣演化。</span>
+            <span data-lang-en>Multi-interest extraction via Capsule Networks and Transformers, combined with temporal sequential modeling to capture dynamic user interest evolution.</span>
           </p>
           <div class="project-tags">
             <span class="project-tag">Transformer</span>
@@ -246,8 +391,8 @@
             </span>
           </div>
           <p class="project-desc">
-            <span data-lang-zh>融合广告素材的图像、视频、文本等多模态信息，通过CLIP/BLIP类模型提取语义特征，构建跨模态用户-广告匹配模型，提升广告相关性与点击率。</span>
-            <span data-lang-en>Fusing image, video, and text information from ad creatives, extracting semantic features via CLIP/BLIP-family models, and building cross-modal user-ad matching models to improve ad relevance and CTR.</span>
+            <span data-lang-zh>融合广告素材的图像、视频、文本等多模态信息，通过CLIP/BLIP类模型提取语义特征，构建跨模态用户-广告匹配模型。</span>
+            <span data-lang-en>Fusing image, video, and text from ad creatives, extracting semantic features via CLIP/BLIP-family models, building cross-modal user-ad matching models.</span>
           </p>
           <div class="project-tags">
             <span class="project-tag">CLIP</span>
@@ -271,8 +416,8 @@
             </span>
           </div>
           <p class="project-desc">
-            <span data-lang-zh>将多模态内容表征（图文视频）与传统ID Embedding进行深度融合，通过生成式建模方法捕获用户多维度兴趣，解决冷启动和跨域推荐问题。已申请相关专利。</span>
-            <span data-lang-en>Deep fusion of multimodal content representations (image/text/video) with traditional ID embeddings, capturing multi-dimensional user interests via generative modeling to address cold-start and cross-domain recommendation. Related patent filed.</span>
+            <span data-lang-zh>将多模态内容表征与传统ID Embedding进行深度融合，通过生成式建模捕获用户多维度兴趣，解决冷启动和跨域推荐问题。已申请相关专利。</span>
+            <span data-lang-en>Deep fusion of multimodal content representations with traditional ID embeddings, capturing multi-dimensional user interests via generative modeling. Related patent filed.</span>
           </p>
           <div class="project-tags">
             <span class="project-tag">
@@ -289,14 +434,9 @@
             </span>
           </div>
         </div>
-
-        <p class="tab-note">
-          <span data-lang-zh>💡 多模态内容理解是下一代推荐系统的核心能力，通过理解"内容是什么"来更精准地匹配"用户要什么"。</span>
-          <span data-lang-en>💡 Multimodal content understanding is the core capability of next-gen RecSys — understanding "what the content is" to better match "what the user wants".</span>
-        </p>
       </div>
 
-      <!-- Quant / Stocks Tab -->
+      <!-- Quant Tab -->
       <div class="tab-panel" id="tab-quant">
         <div class="project-item">
           <div class="project-header">
@@ -310,8 +450,8 @@
             </span>
           </div>
           <p class="project-desc">
-            <span data-lang-zh>利用PPO/DQN强化学习算法，结合技术指标和市场情绪因子，构建自动化交易策略。回测框架基于Python + Backtrader。</span>
-            <span data-lang-en>Building automated trading strategies using PPO/DQN reinforcement learning with technical indicators and market sentiment factors. Backtesting framework based on Python + Backtrader.</span>
+            <span data-lang-zh>利用PPO/DQN强化学习算法，结合技术指标和市场情绪因子，构建自动化交易策略。</span>
+            <span data-lang-en>Building automated trading strategies using PPO/DQN reinforcement learning with technical indicators and market sentiment factors.</span>
           </p>
           <div class="project-tags">
             <span class="project-tag">Python</span>
@@ -332,8 +472,8 @@
             </span>
           </div>
           <p class="project-desc">
-            <span data-lang-zh>基于机器学习的多因子选股框架，融合基本面、量价、另类数据等因子，利用XGBoost/LightGBM进行因子合成与收益预测。</span>
-            <span data-lang-en>ML-based multi-factor stock selection framework combining fundamental, price-volume, and alternative data factors, using XGBoost/LightGBM for factor synthesis and return prediction.</span>
+            <span data-lang-zh>基于机器学习的多因子选股框架，融合基本面、量价、另类数据等因子。</span>
+            <span data-lang-en>ML-based multi-factor stock selection framework combining fundamental, price-volume, and alternative data factors.</span>
           </p>
           <div class="project-tags">
             <span class="project-tag">XGBoost</span>
@@ -344,11 +484,6 @@
             </span>
           </div>
         </div>
-
-        <p class="tab-note">
-          <span data-lang-zh>💡 将推荐算法的建模思路（特征工程、多目标优化、序列建模）迁移到量化交易中，探索 AI + 金融的交叉应用。</span>
-          <span data-lang-en>💡 Transferring recommendation modeling techniques (feature engineering, multi-objective optimization, sequential modeling) to quantitative trading, exploring AI + Finance intersections.</span>
-        </p>
       </div>
 
       <!-- Robotics Tab -->
@@ -365,8 +500,8 @@
             </span>
           </div>
           <p class="project-desc">
-            <span data-lang-zh>搭建基于ROS2的家用机器人原型，集成SLAM导航、语音交互和视觉识别能力，实现自主导航与简单人机对话。</span>
-            <span data-lang-en>Building a home robot prototype based on ROS2, integrating SLAM navigation, voice interaction, and visual recognition for autonomous navigation and simple human-robot dialogue.</span>
+            <span data-lang-zh>搭建基于ROS2的家用机器人原型，集成SLAM导航、语音交互和视觉识别能力。</span>
+            <span data-lang-en>Building a home robot prototype based on ROS2, integrating SLAM navigation, voice interaction, and visual recognition.</span>
           </p>
           <div class="project-tags">
             <span class="project-tag">ROS2</span>
@@ -390,8 +525,8 @@
             </span>
           </div>
           <p class="project-desc">
-            <span data-lang-zh>探索用大语言模型作为机器人高层任务规划器，通过自然语言指令分解复杂任务并调用底层技能执行。</span>
-            <span data-lang-en>Exploring LLMs as high-level task planners for robots, decomposing complex tasks from natural language instructions and invoking low-level skills for execution.</span>
+            <span data-lang-zh>探索用大语言模型作为机器人高层任务规划器，通过自然语言指令分解复杂任务。</span>
+            <span data-lang-en>Exploring LLMs as high-level task planners for robots, decomposing complex tasks from natural language instructions.</span>
           </p>
           <div class="project-tags">
             <span class="project-tag">LLM</span>
@@ -402,174 +537,11 @@
             <span class="project-tag">Embodied AI</span>
           </div>
         </div>
-
-        <p class="tab-note">
-          <span data-lang-zh>💡 对具身智能（Embodied AI）方向充满兴趣，希望将LLM/推荐系统中的决策能力迁移到物理世界的机器人交互中。</span>
-          <span data-lang-en>💡 Passionate about Embodied AI — aiming to transfer decision-making capabilities from LLM/RecSys to real-world robot interactions.</span>
-        </p>
       </div>
-    </section>
+    </div>
 
-    <hr>
-
-    <!-- Selected Work Experience -->
-    <section id="experience">
-      <h2>
-        <span data-lang-zh>工作经历</span>
-        <span data-lang-en>Experience</span>
-      </h2>
-
-      <div class="exp-item">
-        <div class="exp-header">
-          <strong>
-            <span data-lang-zh>腾讯 — 高级研究员</span>
-            <span data-lang-en>Tencent — Senior Researcher</span>
-          </strong>
-          <span class="exp-date">2018.05 – Present</span>
-        </div>
-        <ul>
-          <li>
-            <span data-lang-zh><strong>广告电商行业模型（2020–2022，负责人）：</strong>从0搭建行业模型，使用MoE/MMoE/CGC多任务融合建模，引入STAR/DIN-attention/FwFFM等模型优化。上线效果：电商行业消耗+3.48%，GMV+5.93%，带动大盘GMV+1.48%。</span>
-            <span data-lang-en><strong>E-commerce Ad Industry Model (2020–2022, Lead):</strong> Built industry-specific models from scratch using MoE/MMoE/CGC multi-task learning, with STAR/DIN-attention/FwFFM optimizations. Results: +3.48% ad spend, +5.93% GMV, +1.48% overall platform GMV.</span>
-          </li>
-          <li>
-            <span data-lang-zh><strong>电商特征图谱构建（2019–2020，负责人）：</strong>构建DSSM及自监督Embedding特征，泛娱乐特征及电商embedding特征应用于召回/粗排/精排全链路。上线效果：电商行业消耗+0.88%，GMV+1.38%。</span>
-            <span data-lang-en><strong>E-commerce Feature Graph (2019–2020, Lead):</strong> Built DSSM and self-supervised embedding features, pan-entertainment and e-commerce embedding features applied across retrieval/pre-ranking/ranking pipeline. Results: +0.88% ad spend, +1.38% GMV.</span>
-          </li>
-          <li>
-            <span data-lang-zh><strong>信息流推荐（2018–2020，负责人）：</strong>负责波洞App（从0到1）、手Q动漫、企鹅电竞视频Feeds的推荐算法，从LR到NN模型演进，经历冷启动、策略迭代等各阶段。对比产品部算法中台：波洞视频观看时长+68%，点击率+41%。</span>
-            <span data-lang-en><strong>Feed Recommendation (2018–2020, Lead):</strong> Led recommendation systems for Boodo App (built from scratch), QQ Comics, Penguin Esports video feeds. Evolved from LR to deep NN models through cold-start, strategy iterations. vs. product algorithm team: +68% watch time, +41% CTR.</span>
-          </li>
-          <li>
-            <span data-lang-zh><strong>内部行家咨询：</strong>在腾讯"行家"平台提供「从信息流推荐到广告推荐的模型策略经验」专题咨询，涵盖冷启动、多样性、多目标建模、bias问题、embedding特征构建、算法赛马等话题。累计46次咨询，评分98.55/100，2023年度优秀行家。</span>
-            <span data-lang-en><strong>Internal Expert Consulting:</strong> Provided consulting on "Model & Strategy Experience from Feed Recommendation to Ad Recommendation" on Tencent's Expert platform, covering cold-start, diversity, multi-objective modeling, bias issues, embedding feature engineering, and algorithm A/B testing. 46 consultations, rated 98.55/100, named 2023 Annual Outstanding Expert.</span>
-            <div class="testimonials">
-              <blockquote>
-                <span data-lang-zh>"对推荐，包括广告、信息流、电商等行业都有大量的经验，思维敏捷，快速给出基于过往经验的想法和解法，获益良多。"</span>
-                <span data-lang-en>"Extensive experience across recommendation, ads, feeds, and e-commerce. Quick-thinking, rapidly provides ideas and solutions based on past experience. Greatly beneficial."</span>
-              </blockquote>
-              <blockquote>
-                <span data-lang-zh>"在全链路上对信息流推荐和广告推荐的差异有宏观的了解，并学习到一部分广告推荐经验。"</span>
-                <span data-lang-en>"Gained a macro-level understanding of the differences between feed recommendation and ad recommendation across the full pipeline."</span>
-              </blockquote>
-              <blockquote>
-                <span data-lang-zh>"在广告模型特征算法等方面经验非常丰富，对AI的理解也非常深刻，收获很大。"</span>
-                <span data-lang-en>"Very rich experience in ad model features and algorithms, with deep understanding of AI. Extremely rewarding."</span>
-              </blockquote>
-              <blockquote>
-                <span data-lang-zh>"讲了很多信息流广告推荐的相关知识，也延伸了很多目前行业内面临的挑战与机遇。"</span>
-                <span data-lang-en>"Covered extensive knowledge on feed & ad recommendation, and extended into current industry challenges and opportunities."</span>
-              </blockquote>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-header">
-          <strong>
-            <span data-lang-zh>华为 — 高级算法工程师</span>
-            <span data-lang-en>Huawei — Senior Algorithm Engineer</span>
-          </strong>
-          <span class="exp-date">2016.03 – 2018.04</span>
-        </div>
-        <ul>
-          <li>
-            <span data-lang-zh><strong>UDM大数据营销平台：</strong>负责Lookalike用户挖掘模块和实时营销时机事件引擎开发，基于Hadoop/Spark/Kafka构建实时敏捷数字化营销解决方案。</span>
-            <span data-lang-en><strong>UDM Big Data Marketing Platform:</strong> Developed Lookalike user mining module and real-time marketing event engine using Hadoop/Spark/Kafka for agile digital marketing solutions.</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <hr>
-
-    <!-- Education -->
-    <section id="education">
-      <h2>
-        <span data-lang-zh>教育背景</span>
-        <span data-lang-en>Education</span>
-      </h2>
-      <ul class="edu-list">
-        <li>
-          <div class="exp-header">
-            <strong>
-              <span data-lang-zh>国防科学技术大学 — 硕士</span>
-              <span data-lang-en>National University of Defense Technology (NUDT) — M.S.</span>
-            </strong>
-            <span class="exp-date">2013 – 2016</span>
-          </div>
-          <span data-lang-zh>信息系统与管理学院，研究方向：推荐算法 / 大数据 / 机器学习</span>
-          <span data-lang-en>School of Information Systems and Management. Research: Recommendation Algorithms / Big Data / Machine Learning</span>
-          <br>
-          <span data-lang-zh>完成Twitter大数据分析平台建设（亿级数据量），获军事创新二等奖</span>
-          <span data-lang-en>Built Twitter big data analytics platform (100M+ scale), received Military Innovation 2nd Prize</span>
-        </li>
-        <li>
-          <div class="exp-header">
-            <strong>
-              <span data-lang-zh>北京邮电大学 — 本科</span>
-              <span data-lang-en>Beijing University of Posts and Telecommunications (BUPT) — B.S.</span>
-            </strong>
-            <span class="exp-date">2009 – 2013</span>
-          </div>
-          <span data-lang-zh>管理学院，电子商务专业</span>
-          <span data-lang-en>School of Management, E-Commerce</span>
-        </li>
-      </ul>
-    </section>
-
-    <hr>
-
-    <!-- Awards -->
-    <section id="awards">
-      <h2>
-        <span data-lang-zh>荣誉奖项</span>
-        <span data-lang-en>Honors & Awards</span>
-      </h2>
-      <ul class="awards-list">
-        <li>
-          <span data-lang-zh>2023 腾讯"行家"平台年度优秀行家（推荐与广告算法方向，46次咨询，评分98.55）</span>
-          <span data-lang-en>2023 Tencent "Expert" Platform Annual Outstanding Expert (Rec & Ads algorithms, 46 consultations, rated 98.55/100)</span>
-        </li>
-        <li>
-          <span data-lang-zh>2022 入选深圳创新中心专家人才库</span>
-          <span data-lang-en>2022 Selected for Shenzhen Innovation Center Expert Talent Pool</span>
-        </li>
-        <li>
-          <span data-lang-zh>腾讯连续多年四/五星员工</span>
-          <span data-lang-en>Tencent 4/5-Star Employee for multiple consecutive years</span>
-        </li>
-        <li>
-          <span data-lang-zh>《开放推荐引擎》获 TEG 2019H2 SEVP业务突破奖</span>
-          <span data-lang-en>Open Recommendation Engine — TEG 2019H2 SEVP Business Breakthrough Award</span>
-        </li>
-        <li>
-          <span data-lang-zh>《特征挖掘工程》获 TEG 2020H2 SEVP业务突破奖</span>
-          <span data-lang-en>Feature Mining Engineering — TEG 2020H2 SEVP Business Breakthrough Award</span>
-        </li>
-        <li>
-          <span data-lang-zh>华为2016年明日之星、两次部门软件之星</span>
-          <span data-lang-en>Huawei 2016 Star of Tomorrow, twice Department Software Star</span>
-        </li>
-        <li>
-          <span data-lang-zh>Twitter数据分析平台获军事创新二等奖</span>
-          <span data-lang-en>Twitter Analytics Platform — Military Innovation 2nd Prize</span>
-        </li>
-        <li>
-          Kaggle — San Francisco Crime Classification, Top 10% (2335 teams)
-        </li>
-        <li>
-          <span data-lang-zh>2012 全国大学生"创意、创新、创业"电子商务比赛北京赛区三等奖</span>
-          <span data-lang-en>2012 National E-Commerce Innovation Competition, Beijing Region 3rd Prize</span>
-        </li>
-      </ul>
-    </section>
-
-    <hr>
-
-    <!-- Publications & Patents -->
-    <section id="publications">
+    <!-- ==================== PUBLICATIONS PAGE ==================== -->
+    <div class="page" id="page-publications">
       <h2>
         <span data-lang-zh>论文与专利</span>
         <span data-lang-en>Publications & Patents</span>
@@ -716,13 +688,67 @@
           Z Ding, H Wang, <strong>Liang Guo</strong>, F Qiao, J Cao, D Shen — <em>WISE, 2015</em>
         </li>
       </ul>
-    </section>
+    </div>
 
-    <hr>
+    <!-- ==================== AWARDS PAGE ==================== -->
+    <div class="page" id="page-awards">
+      <h2>
+        <span data-lang-zh>荣誉奖项</span>
+        <span data-lang-en>Honors & Awards</span>
+      </h2>
+      <ul class="awards-list">
+        <li>
+          <span class="date-tag">2023</span>
+          <span data-lang-zh>腾讯"行家"平台年度优秀行家（推荐与广告算法方向，46次咨询，评分98.55）</span>
+          <span data-lang-en>Tencent "Expert" Platform Annual Outstanding Expert (Rec & Ads, 46 consultations, rated 98.55/100)</span>
+        </li>
+        <li>
+          <span class="date-tag">2022</span>
+          <span data-lang-zh>入选深圳创新中心专家人才库</span>
+          <span data-lang-en>Selected for Shenzhen Innovation Center Expert Talent Pool</span>
+        </li>
+        <li>
+          <span class="date-tag">2018–2024</span>
+          <span data-lang-zh>腾讯连续多年四/五星员工</span>
+          <span data-lang-en>Tencent 4/5-Star Employee for multiple consecutive years</span>
+        </li>
+        <li>
+          <span class="date-tag">2020</span>
+          <span data-lang-zh>《特征挖掘工程》获 TEG 2020H2 SEVP业务突破奖</span>
+          <span data-lang-en>Feature Mining Engineering — TEG 2020H2 SEVP Business Breakthrough Award</span>
+        </li>
+        <li>
+          <span class="date-tag">2019</span>
+          <span data-lang-zh>《开放推荐引擎》获 TEG 2019H2 SEVP业务突破奖</span>
+          <span data-lang-en>Open Recommendation Engine — TEG 2019H2 SEVP Business Breakthrough Award</span>
+        </li>
+        <li>
+          <span class="date-tag">2016</span>
+          <span data-lang-zh>华为明日之星、两次部门软件之星</span>
+          <span data-lang-en>Huawei Star of Tomorrow, twice Department Software Star</span>
+        </li>
+        <li>
+          <span class="date-tag">2015</span>
+          <span data-lang-zh>Twitter数据分析平台获军事创新二等奖</span>
+          <span data-lang-en>Twitter Analytics Platform — Military Innovation 2nd Prize</span>
+        </li>
+        <li>
+          <span class="date-tag">2015</span>
+          Kaggle — San Francisco Crime Classification, Top 10% (2335 teams)
+        </li>
+        <li>
+          <span class="date-tag">2012</span>
+          <span data-lang-zh>全国大学生"创意、创新、创业"电子商务比赛北京赛区三等奖</span>
+          <span data-lang-en>National E-Commerce Innovation Competition, Beijing Region 3rd Prize</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Footer -->
     <footer class="footer">
       <p>
-        <span data-lang-zh>最后更新：2026年3月</span>
-        <span data-lang-en>Last updated: March 2026</span>
+        <span data-lang-zh>最后更新：2026年4月</span>
+        <span data-lang-en>Last updated: April 2026</span>
       </p>
     </footer>
 
