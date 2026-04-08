@@ -53,3 +53,11 @@ document.querySelector('.nav-name').addEventListener('click', function (e) {
   document.getElementById('page-about').classList.add('active');
   window.scrollTo(0, 0);
 });
+
+// Accordion toggle for Experience cards
+document.querySelectorAll('.accordion-header').forEach(function (header) {
+  header.addEventListener('click', function () {
+    var card = header.parentElement;
+    card.classList.toggle('open');
+  });
+});

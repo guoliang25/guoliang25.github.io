@@ -313,6 +313,11 @@ body.lang-zh [data-lang-zh] {
   border-bottom: none;
 }
 
+.news-list .testimonials {
+  margin-top: 8px;
+  width: 100%;
+}
+
 .news-date {
   display: inline-block;
   min-width: 80px;
@@ -350,28 +355,112 @@ h3 {
   margin-bottom: 12px;
 }
 
-/* ========== Experience ========== */
-.exp-item {
-  margin-bottom: 28px;
+/* ========== Experience (Accordion Cards) ========== */
+.exp-group {
+  margin-bottom: 32px;
 }
 
-.exp-header {
+.exp-group-header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   flex-wrap: wrap;
-  margin-bottom: 8px;
+  margin-bottom: 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-.exp-item ul {
-  padding-left: 20px;
-  margin-top: 8px;
+.exp-group-header strong {
+  font-size: 1.05rem;
+  color: #222;
 }
 
-.exp-item li {
-  margin-bottom: 12px;
-  font-size: 0.92rem;
-  color: #444;
+/* Accordion card */
+.accordion-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: #fafbfc;
+  overflow: hidden;
+  transition: box-shadow 0.15s;
+}
+
+.accordion-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  cursor: pointer;
+  user-select: none;
+  gap: 10px;
+}
+
+.accordion-arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #999;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.accordion-card.open .accordion-arrow {
+  transform: rotate(180deg);
+}
+
+.accordion-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #222;
+  flex: 1;
+}
+
+.accordion-meta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.role-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 3px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  white-space: nowrap;
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  padding: 0 18px;
+}
+
+.accordion-card.open .accordion-body {
+  max-height: 600px;
+  padding: 0 18px 16px;
+}
+
+.accordion-body p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.65;
+  margin-bottom: 10px;
+}
+
+.accordion-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
 }
 
 .testimonials {
@@ -610,10 +699,19 @@ h3 {
     justify-content: center;
   }
 
-  .exp-header,
+  .exp-group-header,
   .edu-header {
     flex-direction: column;
     gap: 4px;
+  }
+
+  .accordion-header {
+    flex-wrap: wrap;
+  }
+
+  .accordion-meta {
+    flex-basis: 100%;
+    margin-left: 20px;
   }
 
   .tab-btn {
