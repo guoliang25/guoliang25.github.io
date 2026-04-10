@@ -599,6 +599,7 @@ h3 {
   border-radius: 8px;
   background: #fafbfc;
   transition: box-shadow 0.15s;
+  cursor: pointer;
 }
 
 .project-item:hover {
@@ -674,6 +675,212 @@ h3 {
   border-radius: 0 4px 4px 0;
 }
 
+/* ========== Project Detail View ========== */
+.project-detail {
+  padding-top: 8px;
+}
+
+.project-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  color: #555;
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.15s;
+  margin-bottom: 24px;
+}
+
+.project-back-btn:hover {
+  border-color: #1772d0;
+  color: #1772d0;
+  background: #f8faff;
+}
+
+/* Markdown rendered content */
+#project-detail-content {
+  line-height: 1.8;
+}
+
+#project-detail-content h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+#project-detail-content h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #222;
+  margin-top: 32px;
+  margin-bottom: 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+#project-detail-content h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #333;
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+#project-detail-content h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #444;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+#project-detail-content p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 14px;
+}
+
+#project-detail-content ul,
+#project-detail-content ol {
+  padding-left: 24px;
+  margin-bottom: 14px;
+}
+
+#project-detail-content li {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 6px;
+  line-height: 1.7;
+}
+
+#project-detail-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 16px 0;
+  border: 1px solid #e5e7eb;
+}
+
+#project-detail-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 0.9rem;
+}
+
+#project-detail-content th,
+#project-detail-content td {
+  padding: 10px 14px;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+#project-detail-content th {
+  background: #f3f4f6;
+  font-weight: 600;
+  color: #333;
+}
+
+#project-detail-content td {
+  color: #444;
+}
+
+#project-detail-content tr:hover {
+  background: #fafbfc;
+}
+
+#project-detail-content code {
+  font-family: 'SF Mono', 'Menlo', 'Consolas', monospace;
+  font-size: 0.85em;
+  background: #f3f4f6;
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: #d63384;
+}
+
+#project-detail-content pre {
+  background: #1e1e2e;
+  color: #cdd6f4;
+  padding: 16px 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 16px 0;
+  line-height: 1.5;
+}
+
+#project-detail-content pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  color: inherit;
+  font-size: 0.88rem;
+}
+
+#project-detail-content blockquote {
+  margin: 16px 0;
+  padding: 12px 18px;
+  border-left: 4px solid #1772d0;
+  background: #f8faff;
+  border-radius: 0 6px 6px 0;
+  color: #555;
+  font-size: 0.93rem;
+}
+
+#project-detail-content blockquote p {
+  margin-bottom: 0;
+}
+
+#project-detail-content strong {
+  color: #222;
+}
+
+#project-detail-content a {
+  color: #1772d0;
+  text-decoration: none;
+}
+
+#project-detail-content a:hover {
+  text-decoration: underline;
+}
+
+/* KaTeX display math centering */
+#project-detail-content .katex-display {
+  margin: 20px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Loading and placeholder states */
+.project-loading {
+  text-align: center;
+  color: #888;
+  font-size: 0.95rem;
+  padding: 48px 0;
+}
+
+.project-placeholder {
+  text-align: center;
+  padding: 64px 24px;
+  color: #888;
+  background: #fafbfc;
+  border: 1px dashed #d1d5db;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.project-placeholder p {
+  font-size: 1rem;
+  color: #888;
+}
+
 /* ========== Responsive ========== */
 @media (max-width: 640px) {
   .bio {
@@ -746,5 +953,29 @@ h3 {
   .nav-tab {
     padding: 6px 10px;
     font-size: 0.82rem;
+  }
+
+  #project-detail-content h1 {
+    font-size: 1.3rem;
+  }
+
+  #project-detail-content h2 {
+    font-size: 1.1rem;
+  }
+
+  #project-detail-content table {
+    font-size: 0.82rem;
+    display: block;
+    overflow-x: auto;
+  }
+
+  #project-detail-content th,
+  #project-detail-content td {
+    padding: 8px 10px;
+  }
+
+  .project-back-btn {
+    font-size: 0.85rem;
+    padding: 6px 12px;
   }
 }

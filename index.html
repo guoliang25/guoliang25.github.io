@@ -303,9 +303,18 @@
         </button>
       </div>
 
+      <!-- Project Detail View (hidden by default) -->
+      <div id="project-detail" class="project-detail" style="display:none;">
+        <button id="project-back" class="project-back-btn">
+          <span data-lang-zh>&larr; 返回项目列表</span>
+          <span data-lang-en>&larr; Back to Projects</span>
+        </button>
+        <div id="project-detail-content"></div>
+      </div>
+
       <!-- RecSys Tab -->
       <div class="tab-panel active" id="tab-recsys">
-        <div class="project-item">
+        <div class="project-item" data-project="recsys-llm-rec">
           <div class="project-header">
             <strong>
               <span data-lang-zh>LLM驱动的生成式推荐系统</span>
@@ -330,7 +339,7 @@
           </div>
         </div>
 
-        <div class="project-item">
+        <div class="project-item" data-project="recsys-multi-interest">
           <div class="project-header">
             <strong>
               <span data-lang-zh>用户多兴趣表征与序列建模</span>
@@ -358,7 +367,7 @@
           </div>
         </div>
 
-        <div class="project-item">
+        <div class="project-item" data-project="recsys-ad-industry">
           <div class="project-header">
             <strong>
               <span data-lang-zh>广告电商行业模型</span>
@@ -382,7 +391,7 @@
           </div>
         </div>
 
-        <div class="project-item">
+        <div class="project-item" data-project="recsys-feed">
           <div class="project-header">
             <strong>
               <span data-lang-zh>信息流推荐系统</span>
@@ -408,7 +417,7 @@
           </div>
         </div>
 
-        <div class="project-item">
+        <div class="project-item" data-project="recsys-udm">
           <div class="project-header">
             <strong>
               <span data-lang-zh>UDM大数据营销平台</span>
@@ -440,7 +449,7 @@
 
       <!-- Multimodal Tab -->
       <div class="tab-panel" id="tab-multimodal">
-        <div class="project-item">
+        <div class="project-item" data-project="multimodal-ad">
           <div class="project-header">
             <strong>
               <span data-lang-zh>多模态广告内容理解与匹配</span>
@@ -465,7 +474,7 @@
           </div>
         </div>
 
-        <div class="project-item">
+        <div class="project-item" data-project="multimodal-interest">
           <div class="project-header">
             <strong>
               <span data-lang-zh>多模态+ID融合的用户生成式兴趣建模</span>
@@ -496,7 +505,7 @@
           </div>
         </div>
 
-        <div class="project-item">
+        <div class="project-item" data-project="multimodal-feature-graph">
           <div class="project-header">
             <strong>
               <span data-lang-zh>电商特征图谱构建</span>
@@ -525,7 +534,7 @@
 
       <!-- Quant Tab -->
       <div class="tab-panel" id="tab-quant">
-        <div class="project-item">
+        <div class="project-item" data-project="quant-rl-trading">
           <div class="project-header">
             <strong>
               <span data-lang-zh>基于强化学习的A股量化交易策略</span>
@@ -547,7 +556,7 @@
           </div>
         </div>
 
-        <div class="project-item">
+        <div class="project-item" data-project="quant-multi-factor">
           <div class="project-header">
             <strong>
               <span data-lang-zh>多因子选股模型</span>
@@ -575,7 +584,7 @@
 
       <!-- Robotics Tab -->
       <div class="tab-panel" id="tab-robotics">
-        <div class="project-item">
+        <div class="project-item" data-project="robotics-ros2">
           <div class="project-header">
             <strong>
               <span data-lang-zh>基于ROS2的智能机器人平台</span>
@@ -600,7 +609,7 @@
           </div>
         </div>
 
-        <div class="project-item">
+        <div class="project-item" data-project="robotics-llm-planning">
           <div class="project-header">
             <strong>
               <span data-lang-zh>LLM驱动的机器人任务规划</span>
@@ -1057,6 +1066,12 @@
     </footer>
 
   </div>
+
+  <!-- Markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- KaTeX math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
 
   <script src="js/script.js"></script>
 </body>
