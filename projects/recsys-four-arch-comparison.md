@@ -9,29 +9,56 @@
 
 ## 一图式定位
 
-```
-时间线 →
- 2025.05          2025.07           2025.10            2026.02
-   │                │                  │                   │
- LONGER         RankMixer           OneTrans           MixFormer
- 长序列建模       特征交互 scaling    统一 ranking         "统一架构"
- 的终极版                            backbone            的精细版
-   │                │                  │                   │
-   ▼                ▼                  ▼                   ▼
- "我只做          "我只做           "我把两者合到       "我把两者合并，
-   序列"         特征交互"          一条栈里"          并做得更精细"
+```mermaid
+flowchart TB
+    subgraph T[四大架构时间线与定位]
+        direction LR
+        A["<b>2025.05 · LONGER</b><br/>长序列建模的终极版<br/><i>我只做序列</i>"]
+        B["<b>2025.07 · RankMixer</b><br/>特征交互的 scaling<br/><i>我只做特征交互</i>"]
+        C["<b>2025.10 · OneTrans</b><br/>统一 ranking backbone<br/><i>我把两者合到一条栈里</i>"]
+        D["<b>2026.02 · MixFormer</b><br/>&quot;统一架构&quot;的精细版<br/><i>我把两者合并，并做得更精细</i>"]
+        A --> B --> C --> D
+    end
+    classDef seq fill:#e8f4ff,stroke:#1e88e5,color:#0d47a1
+    classDef fi fill:#fff3e0,stroke:#fb8c00,color:#e65100
+    classDef unified fill:#e8f5e9,stroke:#43a047,color:#1b5e20
+    classDef refined fill:#f3e5f5,stroke:#8e24aa,color:#4a148c
+    class A seq
+    class B fi
+    class C unified
+    class D refined
 ```
 
 ## 传统 DLRM 两段式，以及四篇论文各自攻击哪一段
 
-传统 ranking 架构：
+传统 ranking 架构，以及四篇论文各自的攻击目标（虚线框标注）：
 
-```
-非序列特征 ─► [特征交互 FI 模块] ───────────────────┐
-                (DCNv2/Wukong/                     │
-                 HiFormer/RankMixer)               ├─► Tower
-序列特征   ─► [序列建模 SM 模块] ─► 压缩向量 ──────┘
-              (DIN/SIM/TWIN/LONGER)
+```mermaid
+flowchart LR
+    F1[非序列特征<br/>user / item / context]
+    F2[序列特征<br/>user behavior sequence]
+    FI["<b>特征交互 FI 模块</b><br/>DCNv2 / Wukong<br/>HiFormer / RankMixer"]
+    SM["<b>序列建模 SM 模块</b><br/>DIN / SIM / TWIN / LONGER"]
+    COMP[压缩向量]
+    T[Tower]
+
+    F1 --> FI --> T
+    F2 --> SM --> COMP --> T
+
+    subgraph R[RankMixer 攻击 FI]
+        FI
+    end
+    subgraph L[LONGER 攻击 SM]
+        SM
+    end
+    subgraph OM[OneTrans / MixFormer 整体替代]
+        FI
+        SM
+    end
+
+    style R stroke:#fb8c00,stroke-width:2px,stroke-dasharray: 5 5
+    style L stroke:#1e88e5,stroke-width:2px,stroke-dasharray: 5 5
+    style OM stroke:#43a047,stroke-width:3px
 ```
 
 四篇论文的定位：
@@ -118,14 +145,19 @@ OneTrans Block 是一个标准的 pre-norm causal Transformer，所有 "特殊�
 
 ### RankMixer vs LONGER · 一横一纵，互补不冲突
 
-```
-                        ┌─ RankMixer 做这里 ─┐
-非序列特征 ─────────────► [特征交互 1B + MoE]  ─┐
-                        └────────────────────┘  │
-                                                ├─► Tower
-                        ┌── LONGER 做这里 ──┐   │
-序列特征   ─► [序列建模 10k + Token Merge + KV] ─┘
-                        └─────────────────────┘
+```mermaid
+flowchart LR
+    F1[非序列特征]
+    F2[序列特征]
+    FI["<b>RankMixer</b><br/>特征交互 1B + MoE<br/>Per-token FFN"]
+    SM["<b>LONGER</b><br/>序列建模 10k<br/>Token Merge + KV Cache"]
+    T[Tower]
+
+    F1 --> FI --> T
+    F2 --> SM --> T
+
+    style FI fill:#fff3e0,stroke:#fb8c00,stroke-width:2px
+    style SM fill:#e8f4ff,stroke:#1e88e5,stroke-width:2px
 ```
 
 可以组合成 **RankMixer + LONGER**，OneTrans 论文里就把这个当最强两段式 baseline。
@@ -152,41 +184,60 @@ OneTrans Block 是一个标准的 pre-norm causal Transformer，所有 "特殊�
 
 ### RankMixer vs MixFormer · 血缘最近的两个
 
-同一批作者（都包含 Zhifang Fan）：
+同一批作者（都包含 Zhifang Fan），MixFormer 可以看作 RankMixer 的"统一 backbone"升级版：
 
-```
-                  ┌─ Multi-head Token Mixing ─┐
-RankMixer  ═══►  │   +  Per-token FFN         │  ═══►  FI-only
-(2025.07)        │   +  Sparse-MoE            │
-                  └────────────────────────────┘
+```mermaid
+flowchart LR
+    subgraph RM["<b>RankMixer (2025.07)</b>"]
+        direction TB
+        R1[Multi-head Token Mixing]
+        R2[Per-token FFN]
+        R3[Sparse-MoE + DTSI]
+        R1 --- R2 --- R3
+    end
+    subgraph MF["<b>MixFormer (2026.02)</b>"]
+        direction TB
+        M1["HeadMixing<br/>(= Token Mixing)"]
+        M2[Per-head SwiGLU FFN]
+        M3[内建 Cross-Attention]
+        M4[User-Item Decoupling]
+        M1 --- M2 --- M3 --- M4
+    end
+    RM -. "继承核心<br/>+ 升级" .-> MF
 
-                  ┌─ HeadMixing（= Token Mixing） ┐
-MixFormer  ═══►  │  + Per-head SwiGLU FFN       │  ═══►  内建序列建模
-(2026.02)        │  + 内建 Cross-Attention       │         （统一 backbone）
-                  │  + User-Item Decoupling      │
-                  └───────────────────────────────┘
+    OUT1[FI-only<br/>外挂 DIN]
+    OUT2[统一 backbone<br/>内建序列建模]
+    RM --> OUT1
+    MF --> OUT2
+
+    style RM fill:#fff3e0,stroke:#fb8c00
+    style MF fill:#f3e5f5,stroke:#8e24aa
+    style OUT1 fill:#ffebee,stroke:#c62828
+    style OUT2 fill:#e8f5e9,stroke:#2e7d32
 ```
 
 MixFormer ≈ RankMixer + 内建 Cross-Attention 序列建模 + User-Item Decoupling。
 
 ## 选型决策树（给工程师）
 
-```
-Q: 你的 ranking 系统瓶颈在哪？
-  │
-  ├─ 特征交互弱（模型卡在 100M 以下）
-  │       └─► 上 RankMixer（1B + MFU 45%，延迟零增）
-  │
-  ├─ 序列还在 SIM/TWIN，丢大量长程信息
-  │       └─► 上 LONGER（端到端 10k + KV Cache）
-  │
-  └─ 两段式限制了统一 scaling
-          │
-          ├─ 希望"一条纯 Transformer 走到底" + 跨请求 KV
-          │       └─► 上 OneTrans
-          │
-          └─ 希望省 FLOPs + 无参数 mixing + 细粒度 head FFN
-                  └─► 上 MixFormer（尤其 UI-MixFormer）
+```mermaid
+flowchart TD
+    Q["<b>你的 ranking 系统瓶颈在哪？</b>"]
+    Q --> A{特征交互弱<br/>模型卡在 100M 以下}
+    Q --> B{序列还在 SIM/TWIN<br/>丢大量长程信息}
+    Q --> C{两段式限制了<br/>统一 scaling}
+
+    A --> RM["上 <b>RankMixer</b><br/>1B + MFU 45%<br/>延迟零增"]
+    B --> LO["上 <b>LONGER</b><br/>端到端 10k + KV Cache"]
+    C --> D{希望一条纯 Transformer<br/>走到底 + 跨请求 KV?}
+    D -- Yes --> OT["上 <b>OneTrans</b>"]
+    D -- No --> E{希望省 FLOPs<br/>+ 无参数 mixing<br/>+ 细粒度 head FFN?}
+    E -- Yes --> MF["上 <b>MixFormer</b><br/>（尤其 UI-MixFormer）"]
+
+    style RM fill:#fff3e0,stroke:#fb8c00,stroke-width:2px
+    style LO fill:#e8f4ff,stroke:#1e88e5,stroke-width:2px
+    style OT fill:#e8f5e9,stroke:#43a047,stroke-width:2px
+    style MF fill:#f3e5f5,stroke:#8e24aa,stroke-width:2px
 ```
 
 **按演化顺序**：RankMixer（FI 侧）→ LONGER（SM 侧）→ OneTrans 或 MixFormer（统一 backbone）。

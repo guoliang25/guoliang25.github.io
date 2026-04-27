@@ -133,6 +133,35 @@ function renderKaTeX(container) {
   container.innerHTML = html;
 }
 
+// Render Mermaid diagrams: marked outputs <pre><code class="language-mermaid">...
+// Mermaid expects <div class="mermaid">..., so we convert and trigger mermaid.run()
+function renderMermaid(container) {
+  if (typeof mermaid === 'undefined') return;
+
+  var mermaidBlocks = container.querySelectorAll('code.language-mermaid, code[class*="language-mermaid"]');
+  if (mermaidBlocks.length === 0) return;
+
+  mermaidBlocks.forEach(function (codeEl, idx) {
+    var pre = codeEl.parentElement;
+    // Decode HTML entities since marked escapes content inside <code>
+    var source = codeEl.textContent;
+    var div = document.createElement('div');
+    div.className = 'mermaid';
+    div.textContent = source;
+    if (pre && pre.tagName === 'PRE') {
+      pre.parentNode.replaceChild(div, pre);
+    } else if (codeEl.parentNode) {
+      codeEl.parentNode.replaceChild(div, codeEl);
+    }
+  });
+
+  try {
+    mermaid.run({ nodes: container.querySelectorAll('.mermaid') });
+  } catch (e) {
+    console.warn('Mermaid render failed:', e);
+  }
+}
+
 // Render markdown content to the detail view
 function renderProjectDetail(rawMarkdown) {
   var lang = document.body.classList.contains('lang-zh') ? 'zh' : 'en';
@@ -158,6 +187,9 @@ function renderProjectDetail(rawMarkdown) {
 
     // Render KaTeX formulas
     renderKaTeX(projectDetailContent);
+
+    // Render Mermaid diagrams
+    renderMermaid(projectDetailContent);
   } else {
     // Fallback: show raw markdown in a pre block
     projectDetailContent.innerHTML = '<pre style="white-space:pre-wrap;">' + content + '</pre>';
