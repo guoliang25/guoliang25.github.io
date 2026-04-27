@@ -13,9 +13,7 @@
 
 RankMixer 的特征 token 构造（论文 2.2 节）：
 
-$$
-x_i = \text{Proj}\big(e_\text{input}[d \cdot (i-1) : d \cdot i]\big), \quad i = 1, \ldots, T
-$$
+$$x_i = \text{Proj}\big(e_\text{input}[d \cdot (i-1) : d \cdot i]\big), \quad i = 1, \ldots, T$$
 
 即把所有特征 embedding 拼成一条长向量 $e_\text{input} \in \mathbb{R}^{Td}$，**均匀切 $T$ 段**，每段做线性投影变成一个 $d$ 维 token。
 
@@ -188,9 +186,7 @@ This topic provides a deep dive into four industrial Ranking architectures from 
 
 RankMixer constructs feature tokens (paper Section 2.2) as:
 
-$$
-x_i = \text{Proj}\big(e_\text{input}[d \cdot (i-1) : d \cdot i]\big), \quad i = 1, \ldots, T
-$$
+$$x_i = \text{Proj}\big(e_\text{input}[d \cdot (i-1) : d \cdot i]\big), \quad i = 1, \ldots, T$$
 
 i.e., concatenate all feature embeddings into one long vector $e_\text{input} \in \mathbb{R}^{Td}$, **uniformly slice it into $T$ segments**, and linearly project each segment into a $d$-dim token.
 
