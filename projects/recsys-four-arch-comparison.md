@@ -1,6 +1,8 @@
 <!-- zh -->
 # 字节四大工业 Ranking 架构对比
 
+> **2026-04-27** · by guoliang
+
 ## 概述
 
 本专题把字节跳动在 2025–2026 年间发表的四个工业 Ranking 架构——**RankMixer / LONGER / OneTrans / MixFormer**——放在同一张坐标系里对比。它们既有共同的时代背景（工业推荐进入 scaling law 时代、LLM 工程栈成熟、GPU 算力充裕），也有各自鲜明的技术立场，合在一起几乎就是字节 RecSys 的一条完整演化线。
@@ -276,6 +278,8 @@ flowchart TD
 
 <!-- en -->
 # Comparison of Four ByteDance Industrial Ranking Architectures
+
+> **2026-04-27** · by guoliang
 
 ## Overview
 

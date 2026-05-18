@@ -1,6 +1,8 @@
 <!-- zh -->
 # 股票技术分析仪表盘
 
+> **2026-04-10** · by guoliang
+
 > 在线体验：[https://guoliang99.github.io/stock-pages/](https://guoliang99.github.io/stock-pages/)
 
 ## 概述
@@ -96,6 +98,8 @@
 
 <!-- en -->
 # Stock Technical Analysis Dashboard
+
+> **2026-04-10** · by guoliang
 
 > Live Demo: [https://guoliang99.github.io/stock-pages/](https://guoliang99.github.io/stock-pages/)
 

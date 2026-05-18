@@ -1,6 +1,8 @@
 <!-- zh -->
 # LLM驱动的生成式推荐系统
 
+> **2026-04-10** · by guoliang
+
 ## 概述
 
 本项目探索将大语言模型（LLM）深度融入推荐系统全链路，构建下一代生成式推荐架构。不同于传统的"召回-粗排-精排-重排"范式，我们利用LLM的强大语义理解能力，在用户兴趣建模、候选集重排序和推荐理由生成等环节实现突破。
@@ -62,6 +64,8 @@ $$L_{rec} = -\sum_{i=1}^{N} \left[ y_i \log(\hat{y}_i) + (1-y_i) \log(1-\hat{y}_
 
 <!-- en -->
 # LLM-Driven Generative Recommendation System
+
+> **2026-04-10** · by guoliang
 
 ## Overview
 

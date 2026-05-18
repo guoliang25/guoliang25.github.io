@@ -1,6 +1,8 @@
 <!-- zh -->
 # RankMixer 的 Token 数 T 与 Scaling Law 的斜率 / 截距
 
+> **2026-04-27** · by guoliang
+
 ## 概述
 
 本专题围绕字节跳动四篇工业级 Ranking 架构（**RankMixer / LONGER / OneTrans / MixFormer**）展开深入解读，聚焦三个容易被一笔带过但实际工业上非常关键的问题：
@@ -173,6 +175,8 @@ LONGER 论文把 sequence length / params / FLOPs 三条轴分别拟合 $y = \al
 
 <!-- en -->
 # RankMixer's Token Count T and the Slope/Intercept of Scaling Law
+
+> **2026-04-27** · by guoliang
 
 ## Overview
 

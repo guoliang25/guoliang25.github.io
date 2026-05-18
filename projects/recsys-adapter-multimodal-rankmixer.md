@@ -1,6 +1,8 @@
 <!-- zh -->
 # 多模态序列建模的 Adapter 方案 · RankMixer 无痛接入
 
+> **2026-04-29** · by guoliang
+
 ## 概述
 
 在已有 RankMixer 基线之上，如何把"多模态用户行为序列"无痛地接入，而不破坏 RankMixer 已经跑稳的 scaling 曲线？本项目从 **Adapter（Houlsby et al. ICML'19）** 的参数高效微调（PEFT）思路出发，给出一个**冻结 RankMixer + 多模态 Cross-Attention Adapter**的落地方案。
@@ -100,6 +102,8 @@ Stage 2 是关键——只训 Adapter 显存小迭代快，能在 1 周内回答
 
 <!-- en -->
 # Multimodal Sequence Adapter · Lossless Integration with RankMixer
+
+> **2026-04-29** · by guoliang
 
 ## Overview
 

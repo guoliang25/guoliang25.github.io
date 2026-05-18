@@ -1,6 +1,8 @@
 <!-- zh -->
 # LLM/VLM 样本组织 vs 推荐系统：从 Megatron 到特征交叉
 
+> **2026-05-18** · by guoliang
+
 ## 概述
 
 本文从 NVIDIA Megatron-LM 的数据组织方式出发，系统对比 LLM 预训练、VLM 和推荐系统在样本组织上的核心差异，深入分析哪些技术可以迁移到推荐场景，以及推荐系统需要哪些个性化设计。最终聚焦于一个关键问题：**Token 化统一序列建模是否具备传统精排模型（FM/DCN）的特征交叉能力？**
@@ -345,6 +347,8 @@ $$\text{Multiplicative}: \quad \text{output} = \sum \text{softmax}(QK^T) \cdot (
 
 <!-- en -->
 # LLM/VLM Data Organization vs RecSys: From Megatron to Feature Crossing
+
+> **2026-05-18** · by guoliang
 
 ## Overview
 
