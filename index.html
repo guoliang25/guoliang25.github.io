@@ -318,6 +318,32 @@
 
       <!-- RecSys Tab -->
       <div class="tab-panel active" id="tab-recsys">
+        <div class="project-item" data-project="recsys-hadamard-vs-matmul">
+          <div class="project-header">
+            <strong>
+              <span data-lang-zh>为什么 Hadamard 积的计算效率比矩阵乘法低</span>
+              <span data-lang-en>Why Hadamard Product Has Lower Compute Efficiency Than MatMul on GPUs</span>
+            </strong>
+            <span class="project-status status-done">
+              <span data-lang-zh>技术分析</span>
+              <span data-lang-en>Technical Analysis</span>
+            </span>
+          </div>
+          <p class="project-desc">
+            <span data-lang-zh>从计算密度（Arithmetic Intensity）角度解释 Hadamard 积在 GPU 上效率低于矩阵乘法的反直觉现象。深入分析数据复用、Tensor Core 利用率、内存访问模式差异，以及推荐系统特征交叉中 DCN-V2/RankMixer 选择矩阵乘的工程原因。</span>
+            <span data-lang-en>Explains the counter-intuitive phenomenon of Hadamard product being less efficient than MatMul on GPUs from the perspective of Arithmetic Intensity. Analyzes data reuse, Tensor Core utilization, memory access patterns, and why DCN-V2/RankMixer choose matrix multiplication for feature crossing in RecSys.</span>
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Arithmetic Intensity</span>
+            <span class="project-tag">GPU</span>
+            <span class="project-tag">
+              <span data-lang-zh>特征交叉</span>
+              <span data-lang-en>Feature Crossing</span>
+            </span>
+            <span class="project-tag">Memory-bound</span>
+          </div>
+        </div>
+
         <div class="project-item" data-project="recsys-llm-data-organization">
           <div class="project-header">
             <strong>
