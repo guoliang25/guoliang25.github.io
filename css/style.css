@@ -520,6 +520,25 @@ h3 {
   margin-bottom: 10px;
 }
 
+.patent-list li.patent-pending {
+  border-left: 3px solid #f59e0b;
+  padding-left: 12px;
+  background: #fffbeb;
+  border-radius: 0 4px 4px 0;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.pending-note {
+  font-size: 0.88rem;
+  color: #92400e;
+  background: #fef3c7;
+  border-left: 3px solid #f59e0b;
+  padding: 8px 12px;
+  border-radius: 0 4px 4px 0;
+  margin: 8px 0 16px 0;
+}
+
 /* ========== Awards ========== */
 .awards-list {
   list-style: none;
