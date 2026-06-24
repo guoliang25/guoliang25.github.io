@@ -684,6 +684,50 @@ h3 {
   border: 1px solid #e2e8f0;
 }
 
+/* ========== RecSys Subsection Headers ========== */
+.recsys-section {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1772d0;
+  margin-top: 28px;
+  margin-bottom: 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e5e7eb;
+  letter-spacing: 0.02em;
+}
+
+.recsys-section:first-child {
+  margin-top: 4px;
+}
+
+.recsys-section-note {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: normal;
+  margin-left: 8px;
+}
+
+/* ========== Project Time Tag ========== */
+.project-time {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 2px 8px;
+  border-radius: 3px;
+  white-space: nowrap;
+  font-family: 'SF Mono', 'Menlo', monospace;
+  margin-left: auto;
+  margin-right: 8px;
+}
+
+.project-org {
+  font-size: 0.82rem;
+  color: #6b7280;
+  margin-top: -2px;
+  margin-bottom: 8px;
+}
+
 .tab-note {
   font-size: 0.88rem;
   color: #888;
