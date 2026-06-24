@@ -265,3 +265,46 @@ document.querySelectorAll('.project-item[data-project]').forEach(function (item)
     }
   });
 });
+
+// Timeline filter chips (RecSys tab)
+function applyTimelineFilter(filter) {
+  var timeline = document.querySelector('.timeline');
+  if (!timeline) return;
+
+  var children = Array.from(timeline.children);
+
+  // 1) Show / hide project items by data-type
+  children.forEach(function (child) {
+    if (child.classList.contains('project-item')) {
+      var type = child.dataset.type;
+      var show = filter === 'all' || type === filter;
+      child.style.display = show ? '' : 'none';
+    }
+  });
+
+  // 2) Hide year markers that have no visible items below them (until the next year)
+  children.forEach(function (child, idx) {
+    if (!child.classList.contains('timeline-year')) return;
+    var hasVisible = false;
+    for (var i = idx + 1; i < children.length; i++) {
+      var sib = children[i];
+      if (sib.classList.contains('timeline-year')) break;
+      if (sib.classList.contains('project-item') && sib.style.display !== 'none') {
+        hasVisible = true;
+        break;
+      }
+    }
+    child.style.display = hasVisible ? '' : 'none';
+  });
+}
+
+document.querySelectorAll('.timeline-filter').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var filter = btn.dataset.filter || 'all';
+    document.querySelectorAll('.timeline-filter').forEach(function (b) {
+      b.classList.remove('active');
+    });
+    btn.classList.add('active');
+    applyTimelineFilter(filter);
+  });
+});
