@@ -684,6 +684,13 @@ h3 {
   border: 1px solid #e2e8f0;
 }
 
+.project-tag.tag-highlight {
+  background: #fff7ed;
+  color: #c2410c;
+  border-color: #fdba74;
+  font-weight: 600;
+}
+
 /* ========== RecSys Subsection Headers ========== */
 .recsys-section {
   font-size: 0.95rem;
