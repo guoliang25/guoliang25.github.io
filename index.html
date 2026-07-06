@@ -331,7 +331,7 @@
           <button class="timeline-filter active" data-filter="all">
             <span data-lang-zh>全部</span>
             <span data-lang-en>All</span>
-            <span class="filter-count">16</span>
+            <span class="filter-count">17</span>
           </button>
           <button class="timeline-filter" data-filter="project">
             <span data-lang-zh>💼 项目经验</span>
@@ -341,13 +341,39 @@
           <button class="timeline-filter" data-filter="tech">
             <span data-lang-zh>📚 技术沉淀</span>
             <span data-lang-en>📚 Technical Notes</span>
-            <span class="filter-count">7</span>
+            <span class="filter-count">8</span>
           </button>
         </div>
 
         <div class="timeline">
 
           <div class="timeline-year">2026</div>
+
+          <div class="project-item" data-project="recsys-flash-attention" data-type="tech">
+            <div class="project-header">
+              <strong>
+                <span class="project-type-badge type-tech">📚</span>
+                <span data-lang-zh>Flash Attention 原理拆解：从加速原理到 Online Softmax 到 Varlen 落地</span>
+                <span data-lang-en>Flash Attention Deep Dive: From Speedup Principles to Online Softmax to Varlen</span>
+              </strong>
+              <span class="project-time">2026.07.06</span>
+              <span class="project-status status-done">
+                <span data-lang-zh>技术分析</span>
+                <span data-lang-en>Technical Analysis</span>
+              </span>
+            </div>
+            <p class="project-desc">
+              <span data-lang-zh>从底往上把 Flash Attention 拆开讲：为什么加速（Memory-bound 本质）、Online Softmax 数值实例（含 α/β 参考系换算的物理直觉）、为什么必须减 max、SRAM 容量与 Tensor Core 对齐决定块大小、以及生产落地的 varlen packed 格式（cu_seqlens、sequence packing）。</span>
+              <span data-lang-en>Bottom-up walkthrough of Flash Attention: why it's fast (memory-bound nature), online softmax with a worked numerical example (α/β as reference-frame conversion factors), why subtracting max is required for FP16 stability, how SRAM capacity and Tensor Core tiles decide block size, and the varlen packed format (cu_seqlens, sequence packing) used in production LLM training.</span>
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Flash Attention</span>
+              <span class="project-tag">Online Softmax</span>
+              <span class="project-tag">CUDA</span>
+              <span class="project-tag">Memory-bound</span>
+              <span class="project-tag">Varlen</span>
+            </div>
+          </div>
 
           <div class="project-item" data-project="recsys-hadamard-vs-matmul" data-type="tech">
             <div class="project-header">
