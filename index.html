@@ -327,7 +327,7 @@
           <button class="timeline-filter active" data-filter="all">
             <span data-lang-zh>全部</span>
             <span data-lang-en>All</span>
-            <span class="filter-count">17</span>
+            <span class="filter-count">18</span>
           </button>
           <button class="timeline-filter" data-filter="project">
             <span data-lang-zh>💼 项目经验</span>
@@ -337,13 +337,43 @@
           <button class="timeline-filter" data-filter="tech">
             <span data-lang-zh>📚 技术沉淀</span>
             <span data-lang-en>📚 Technical Notes</span>
-            <span class="filter-count">8</span>
+            <span class="filter-count">9</span>
           </button>
         </div>
 
         <div class="timeline">
 
           <div class="timeline-year">2026</div>
+
+          <div class="project-item" data-project="recsys-batch-size-gauc" data-type="tech">
+            <div class="project-header">
+              <strong>
+                <span class="project-type-badge type-tech">📚</span>
+                <span data-lang-zh>RecSys 生产训练里 batch_size 的深度分析：从现象到 Optimizer 耦合</span>
+                <span data-lang-en>batch_size in Production RecSys Training: From Phenomenon to Optimizer Coupling</span>
+              </strong>
+              <span class="project-time">2026.08.17</span>
+              <span class="project-status status-done">
+                <span data-lang-zh>技术分析</span>
+                <span data-lang-en>Technical Analysis</span>
+              </span>
+            </div>
+            <p class="project-desc">
+              <span data-lang-zh>一个真实观察：MixerFormer + pCVR 模型上 batch 500→300，离线 GAUC +0.1%。从优化视角、RecSys 视角、归一化视角、指标视角逐层归因，重点深挖 cAdam(β1=1e-5, β2=0.9999) + 双优化器配置如何放大 batch_size 敏感度。附 sum→mean loss 换算对不齐的深层原因，以及按投入产出比排序的解法工具箱（LAMB / SAM / Kendall 加权 / SWA / Progressive Batch）。</span>
+              <span data-lang-en>A real observation: batch 500→300 on a MixerFormer pCVR model, offline GAUC +0.1%. Decomposes attribution across optimization view, RecSys view, normalization view, metric view; deep-dives how cAdam(β1=1e-5, β2=0.9999) + dual optimizer amplifies batch_size sensitivity. Includes the deep reasons why sum→mean loss reparameterization never fully aligns, plus a ROI-ranked toolkit (LAMB / SAM / Kendall reweighting / SWA / Progressive Batch).</span>
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">batch_size</span>
+              <span class="project-tag">GAUC</span>
+              <span class="project-tag">Optimizer</span>
+              <span class="project-tag">LAMB</span>
+              <span class="project-tag">SAM</span>
+              <span class="project-tag">
+                <span data-lang-zh>平坦极小值</span>
+                <span data-lang-en>Flat Minima</span>
+              </span>
+            </div>
+          </div>
 
           <div class="project-item" data-project="recsys-flash-attention" data-type="tech">
             <div class="project-header">
