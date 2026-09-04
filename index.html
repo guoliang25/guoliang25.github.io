@@ -331,7 +331,7 @@
           <button class="timeline-filter active" data-filter="all">
             <span data-lang-zh>全部</span>
             <span data-lang-en>All</span>
-            <span class="filter-count">18</span>
+            <span class="filter-count">19</span>
           </button>
           <button class="timeline-filter" data-filter="project">
             <span data-lang-zh>💼 项目经验</span>
@@ -341,13 +341,43 @@
           <button class="timeline-filter" data-filter="tech">
             <span data-lang-zh>📚 技术沉淀</span>
             <span data-lang-en>📚 Technical Notes</span>
-            <span class="filter-count">9</span>
+            <span class="filter-count">10</span>
           </button>
         </div>
 
         <div class="timeline">
 
           <div class="timeline-year">2026</div>
+
+          <div class="project-item" data-project="recsys-gradient-split-aggregation" data-type="tech">
+            <div class="project-header">
+              <strong>
+                <span class="project-type-badge type-tech">📚</span>
+                <span data-lang-zh>梯度拆分 + 梯度聚合：Burn→Online 切换抖动的两把钥匙</span>
+                <span data-lang-en>Gradient Split + Gradient Aggregation: Two Keys to Burn→Online Switch Jitter</span>
+              </strong>
+              <span class="project-time">2026.09.04</span>
+              <span class="project-status status-done">
+                <span data-lang-zh>技术分析</span>
+                <span data-lang-en>Technical Analysis</span>
+              </span>
+            </div>
+            <p class="project-desc">
+              <span data-lang-zh>推荐模型上线时"权重接得上、pCTR 却跳一下"的隐性断层来自 optimizer 内部状态（FTRL 的 n、Adam 的 v）。本文把 Burn↔Online 的对齐拆成两个维度：梯度拆分对齐"更新步数"，梯度聚合对齐"每步方差"。附完整数值例子说明"只做拆分反而让 n 更偏"，以及 Python 侧 vs C++ kernel 内拆分两条工程路径。与 batch_size 深度分析同一主线。</span>
+              <span data-lang-en>The invisible fault line where "weights transfer perfectly but pCTR jumps" comes from optimizer internal state (FTRL's n, Adam's v). This note decomposes Burn↔Online alignment into two dimensions: gradient split aligns "update step count", gradient aggregation aligns "per-step variance". Includes a full numerical example showing "split alone actually widens the n gap", plus Python-side vs C++ in-kernel implementation paths. Same main thread as the batch_size deep-dive.</span>
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Gradient Split</span>
+              <span class="project-tag">Gradient Aggregation</span>
+              <span class="project-tag">FTRL</span>
+              <span class="project-tag">Adam</span>
+              <span class="project-tag">Optimizer State</span>
+              <span class="project-tag">
+                <span data-lang-zh>Burn/Online</span>
+                <span data-lang-en>Burn/Online</span>
+              </span>
+            </div>
+          </div>
 
           <div class="project-item" data-project="recsys-batch-size-gauc" data-type="tech">
             <div class="project-header">
