@@ -331,7 +331,7 @@
           <button class="timeline-filter active" data-filter="all">
             <span data-lang-zh>全部</span>
             <span data-lang-en>All</span>
-            <span class="filter-count">19</span>
+            <span class="filter-count">20</span>
           </button>
           <button class="timeline-filter" data-filter="project">
             <span data-lang-zh>💼 项目经验</span>
@@ -341,13 +341,43 @@
           <button class="timeline-filter" data-filter="tech">
             <span data-lang-zh>📚 技术沉淀</span>
             <span data-lang-en>📚 Technical Notes</span>
-            <span class="filter-count">10</span>
+            <span class="filter-count">11</span>
           </button>
         </div>
 
         <div class="timeline">
 
           <div class="timeline-year">2026</div>
+
+          <div class="project-item" data-project="recsys-rmsnorm-vs-layernorm" data-type="tech">
+            <div class="project-header">
+              <strong>
+                <span class="project-type-badge type-tech">📚</span>
+                <span data-lang-zh>RMSNorm vs LayerNorm：从 LLM 到推荐系统的迁移之路</span>
+                <span data-lang-en>RMSNorm vs LayerNorm: The Migration Path from LLM to RecSys</span>
+              </strong>
+              <span class="project-time">2026.09.20</span>
+              <span class="project-status status-done">
+                <span data-lang-zh>技术分析</span>
+                <span data-lang-en>Technical Analysis</span>
+              </span>
+            </div>
+            <p class="project-desc">
+              <span data-lang-zh>LLM 侧几乎全线迁到 RMSNorm，而经典推荐（DIN/DIEN/SIM）长期停留在 LayerNorm。2026 年随着推荐主干 Transformer 化 + 生成式推荐范式落地（HSTU、OneRec、字节生成式排序），推荐侧也在跟着往 RMSNorm 迁——但不是全盘替换，而是分位置分模块推进。本文对比两者原理、差异、各自适合的场景，并给出"什么时候该换、什么时候不该换"的工程决策。</span>
+              <span data-lang-en>LLMs have wholesale migrated to RMSNorm; classical RecSys (DIN/DIEN/SIM) stayed on LayerNorm. In 2026, with Transformer-native backbones and generative recommendation paradigms (HSTU, OneRec, ByteDance's generative ranking), RecSys is migrating too — position-by-position, not wholesale. This note compares principles, differences, and per-scenario fit, closing on the engineering decision: "when to switch and when not to".</span>
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">RMSNorm</span>
+              <span class="project-tag">LayerNorm</span>
+              <span class="project-tag">Transformer</span>
+              <span class="project-tag">
+                <span data-lang-zh>生成式推荐</span>
+                <span data-lang-en>Generative RecSys</span>
+              </span>
+              <span class="project-tag">HSTU</span>
+              <span class="project-tag">LLaMA</span>
+            </div>
+          </div>
 
           <div class="project-item" data-project="recsys-gradient-split-aggregation" data-type="tech">
             <div class="project-header">
